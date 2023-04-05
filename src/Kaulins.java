@@ -5,12 +5,16 @@ import javax.swing.JOptionPane;
 
 public class Kaulins {
 	static void mestKaulinu(int reizes) {
-		int skaitlis;
+		int skaitlis, lielakais=0;
 		Random rand = new Random();
 		for(int i=1; i<=reizes; i++) {
 			skaitlis = rand.nextInt(6)+1;	
 			System.out.println("Uzkrita skaitlis "+skaitlis);
+			if(lielakais<skaitlis)
+				lielakais=skaitlis;
 		}
+		System.out.println("LielÄkais skaitlis no metienem bija: "+lielakais);
+		
 	}
 	
 	
@@ -19,7 +23,7 @@ public class Kaulins {
 		int reizes;
 		Scanner scan = new Scanner(System.in);
 		do {
-		System.out.println("Cik reizes mest kauliòu?");
+		System.out.println("Cik reizes mest kauliï¿½u?");
 		reizes = scan.nextInt();
 		}while(reizes<1);
 		mestKaulinu(reizes);
